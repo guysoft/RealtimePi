@@ -1,5 +1,6 @@
 export DIST_NAME=RealtimePi
 export DIST_VERSION=0.1
 export MODULES="base(network,kernel(realtimepi))"
+export KERNEL_SOURCE_CLEANUP="yes"
 
 export BASE_IMAGE_ENLARGEROOT=2000
