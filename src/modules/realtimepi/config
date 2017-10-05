@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+export KERNEL_CONFIG_APPEND="CONFIG_PREEMPT_RT_FULL=y
+CONFIG_DEBUG_PREEMPT=n
+CONFIG_PREEMPT_TRACER=n
+CONFIG_RCU_CPU_STALL_TIMEOUT=21"
+export KERNEL_COMMIT=7dc3bd00d62130ef7f09759a8c0ec9d65f58c987
+# git ls-remote https://github.com/raspberrypi/linux.git | grep rpi-4.9.y | grep -v rebase | head -n 1

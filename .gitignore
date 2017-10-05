@@ -1,0 +1,9 @@
+src/config.local
+src/custompios_path
+src/image/*.zip
+src/image-variants/*.zip
+src/workspace-*
+src/workspace
+src/build.log
+src/vagrant/*.log
+src/vagrant/.vagrant

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# <Script Name>
+# <Description what this module does>
+# Written by <Author>
+# GPL V3
+########
+
+set -x
+
+# Source error handling, leave this in place
+source /common.sh
+install_cleanup_trap
+
+unpack /filesystem/home/pi /home/pi pi
+
+pushd /home/pi
+
+    # realtime patch
+    wget https://www.kernel.org/pub/linux/kernel/projects/rt/4.9/patch-4.9.47-rt37.patch.xz
+
+    pushd linux
+        # Revert a patch that clashes
+	patch -p1 -R < /home/pi/0001-block-Relax-a-check-in-blk_start_queue.patch
+        xzcat ../patch-4.9.47-rt37.patch.xz | patch -p1
+
+    popd
+popd
+
