@@ -1,7 +1,7 @@
 RealtimePi
 ==========
 
-An out of the box `Raspberry Pi <http://www.raspberrypi.org/>`_ Raspbian distro with a realtime kernel. The kernel is a  `RaspberryPi kernel <https://github.com/raspberrypi/linux>`_ patched with the `Preempt RT patch <https://wiki.linuxfoundation.org/realtime/start>`_. Kernel patches are `_taken from here <https://wiki.linuxfoundation.org/realtime/documentation/howto/applications/preemptrt_setup>`_.
+An out of the box `Raspberry Pi <http://www.raspberrypi.org/>`_ Raspbian distro with a realtime kernel. The kernel is a  `RaspberryPi kernel <https://github.com/raspberrypi/linux>`_ patched with the `Preempt RT patch <https://wiki.linuxfoundation.org/realtime/start>`_. Kernel patches are `taken from here <https://wiki.linuxfoundation.org/realtime/documentation/howto/applications/preemptrt_setup>`_.
 
 RealtimePi uses `CustomPiOS <https://github.com/guysoft/CustomPiOS>`_, and you can use RealtimePi as a base image for CustomPiOS to make your own realtime kernel-based disros.
 
