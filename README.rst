@@ -52,7 +52,7 @@ Build requires about 3.5 GB of free space available.
 Note it takes about 6 hours to builds the kernel, and 12 for both kernels!
 You can build it by issuing the following commands::
 
-    sudo apt-get install realpath qemu-user-static
+    sudo apt-get install realpath p7zip-full qemu-user-static
     
     git clone https://github.com/guysoft/CustomPiOS.git
     git clone https://github.com/guysoft/RealtimePi.git
