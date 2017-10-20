@@ -10,6 +10,7 @@ Where to get it?
 
 Official mirror is `here <http://unofficialpi.org/Distros/RealtimePi>`_
 
+Nightly builds are available `here <http://unofficialpi.org/Distros/RealtimePi/nightly/>`_ (currently built on demand)
 
 How to use it?
 --------------
