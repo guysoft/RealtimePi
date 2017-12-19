@@ -16,14 +16,14 @@ unpack /filesystem/home/pi /home/pi pi
 pushd /home/pi
 
     # realtime patch
-    wget https://www.kernel.org/pub/linux/kernel/projects/rt/4.9/patch-4.9.47-rt37.patch.xz
+    wget "${REALTIMEPI_RTPATCH}"
 
     pushd linux
         # Patch for usb-dwc_otg-fix with fix, see https://www.osadl.org/Single-View.111+M5c03315dc57.0.html
 	patch -p1 < /home/pi/patches/0001-usb-dwc_otg-fix-system-lockup-when-interrupts-are-th.patch
         # Revert a patch that clashes
-	patch -p1 -R < /home/pi/patches/0001-block-Relax-a-check-in-blk_start_queue.patch
-        xzcat ../patch-4.9.47-rt37.patch.xz | patch -p1
+	# patch -p1 -R < /home/pi/patches/0001-block-Relax-a-check-in-blk_start_queue.patch
+        xzcat ../$(basename "${REALTIMEPI_RTPATCH}") | patch -p1
 
     popd
 popd
