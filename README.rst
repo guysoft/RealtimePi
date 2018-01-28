@@ -22,7 +22,7 @@ How to use it?
 
 Requirements
 ------------
-* Raspberrypi 1/zero and newser.
+* Raspberrypi, any.
 * 2A power supply
 
 Features
