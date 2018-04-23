@@ -22,15 +22,10 @@ pushd /home/pi
         # Patch for usb-dwc_otg-fix with fix, see https://www.osadl.org/Single-View.111+M5c03315dc57.0.html
 	patch -p1 < /home/pi/patches/0001-usb-dwc_otg-fix-system-lockup-when-interrupts-are-th.patch
 	
-	patch -p1 < /home/pi/patches/0001-hrtimer-Reset-hrtimer-cpu-base-proper-on-CPU-hotplug.patch
-	
-	patch -p1 < /home/pi/patches/0001-workqueue-avoid-hard-lockups-in-show_workqueue_state.patch
-	
-        # Revert a patch that clashes
-	# patch -p1 -R < /home/pi/patches/0001-block-Relax-a-check-in-blk_start_queue.patch
+        # Fix soft irq that breaks the patch
+	patch -p1 < /home/pi/patches/0001-Revert-softirq-Let-ksoftirqd-do-its-job.patch
         xzcat ../$(basename "${REALTIMEPI_RTPATCH}") | patch -p1
         
-        patch -p1 -R < /home/pi/patches/0001-hrtimer-Reset-hrtimer-cpu-base-proper-on-CPU-hotplug.patch
 
     popd
 popd
