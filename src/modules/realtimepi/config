@@ -4,5 +4,6 @@ CONFIG_DEBUG_PREEMPT=n
 CONFIG_PREEMPT_TRACER=n
 CONFIG_RCU_CPU_STALL_TIMEOUT=21"
 export KERNEL_COMMIT=d2cf662756932ca61f61b9552272bb36cde5e966
+export KERNEL_EXPORT_NAME="realtimepi-kernel-4.14.34"
 export REALTIMEPI_RTPATCH=https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/4.14/older/patch-4.14.34-rt27.patch.xz
 # git ls-remote https://github.com/raspberrypi/linux.git | grep rpi-4.9.y | grep -v rebase | head -n 1
