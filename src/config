@@ -1,6 +1,8 @@
 export DIST_NAME=RealtimePi
 export DIST_VERSION=0.4.0
-export MODULES="base(network,kernel(realtimepi))"
+export MODULES="base(network,kernel(realtimepi), usage-statistics)"
 export KERNEL_SOURCE_CLEANUP="yes"
 
 export BASE_IMAGE_ENLARGEROOT=2000
+
+export USAGE_STATISTICS_URL=https://realtimepi-tracking.gnethomelinux.com
