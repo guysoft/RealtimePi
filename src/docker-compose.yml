@@ -9,6 +9,7 @@ services:
     privileged: true
     volumes:
       - ./:/distro
+      - /home/guy/workspace/custom_raspberrypi_os/CustomPiOS/src:/CustomPiOS
     devices:
       - /dev/loop-control
     labels:
