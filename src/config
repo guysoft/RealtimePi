@@ -6,4 +6,3 @@ export KERNEL_SOURCE_CLEANUP="yes"
 export BASE_IMAGE_ENLARGEROOT=2000
 
 export USAGE_STATISTICS_URL=https://realtimepi-tracking.gnethomelinux.com
-export KERNEL_URL=https://github.com/schnitzeltony/linux-raspberrypi/archive
