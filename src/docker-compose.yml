@@ -9,7 +9,12 @@ services:
     privileged: true
     volumes:
       - ./:/distro
+      # - /mnt/sda1/CustomPiOS/src:/CustomPiOS
     devices:
       - /dev/loop-control
     labels:
       - com.centurylinklabs.watchtower.enable=true
+    dns:
+      - 8.8.8.8
+      - 4.4.4.4
+
