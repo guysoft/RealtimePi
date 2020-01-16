@@ -5,6 +5,16 @@ An out of the box `Raspberry Pi <http://www.raspberrypi.org/>`_ Raspbian distro 
 
 RealtimePi uses `CustomPiOS <https://github.com/guysoft/CustomPiOS>`_, and you can use RealtimePi as a base image for CustomPiOS to make your own realtime kernel-based disros.
 
+Donate
+------
+RealtimePi is 100% free and open source and maintained by Guy Sheffer. If its helping your life, your organisation or makes you happy, please consider making a donation. It means I can code more and worry less about my balance. Any amount counts.
+Also many thanks to people contributing code.
+
+|paypal|
+
+.. |paypal| image:: https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif
+   :target: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=26VJ9MSBH3V3W&source=url
+
 Where to get it?
 ----------------
 
