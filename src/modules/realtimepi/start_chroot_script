@@ -14,6 +14,8 @@ install_cleanup_trap
 wget https://github.com/kdoren/linux/releases/download/5.10.35-rt39-scarlett-2/linux-image-5.10.35-rt39-v7l+_5.10.35-8_armhf.deb
 wget https://github.com/kdoren/linux/releases/download/5.10.35-rt39-scarlett-2/linux-libc-dev_5.10.35-8_armhf.deb
 
+dpkg -i *.deb
+
 KERN=5.10.35-rt39-v7l+
 mkdir -p /boot/$KERN/overlays/
 cp -d /usr/lib/linux-image-$KERN/overlays/* /boot/$KERN/overlays/
@@ -32,6 +34,5 @@ overlay_prefix=overlays/
 [all]
 EOF
 
-dpkg -i *.deb
 rm -v *.deb
 
