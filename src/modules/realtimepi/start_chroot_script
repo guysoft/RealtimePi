@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# RealtimePi script
+# Written by Guy Sheffer <guysoft at gmail dot com>
+# GPL V3
+########
+
+set -x
+set -e
+
+# Source error handling, leave this in place
+source /common.sh
+install_cleanup_trap
+
+wget https://github.com/kdoren/linux/releases/download/5.10.35-rt39-scarlett-2/linux-image-5.10.35-rt39-v7l+_5.10.35-8_armhf.deb
+wget https://github.com/kdoren/linux/releases/download/5.10.35-rt39-scarlett-2/linux-libc-dev_5.10.35-8_armhf.deb
+
+KERN=5.10.35-rt39-v7l+
+mkdir -p /boot/$KERN/overlays/
+cp -d /usr/lib/linux-image-$KERN/overlays/* /boot/$KERN/overlays/
+cp -dr /usr/lib/linux-image-$KERN/* /boot/$KERN/
+touch /boot/$KERN/overlays/README
+mv /boot/vmlinuz-$KERN /boot/$KERN/
+mv /boot/System.map-$KERN /boot/$KERN/
+cp /boot/config-$KERN /boot/$KERN/
+cat >> /boot/config.txt << EOF
+
+[all]
+kernel=vmlinuz-$KERN
+# initramfs initrd.img-$KERN
+os_prefix=$KERN/
+overlay_prefix=overlays/
+[all]
+EOF
+
+dpkg -i *.deb
+rm -v *.deb
+
