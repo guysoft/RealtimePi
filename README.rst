@@ -113,4 +113,9 @@ Usage
 #. Run ``src/build_dist`` as root.
 #. The final image will be created in ``src/workspace``
 
+Attribution
+~~~~~~~~~~~
+Logo in some parts uses the svg: https://www.svgrepo.com/svg/276134/leaf
+
 Code contribution would be appreciated!
+
