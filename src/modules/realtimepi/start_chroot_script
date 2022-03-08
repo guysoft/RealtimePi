@@ -11,12 +11,12 @@ set -e
 source /common.sh
 install_cleanup_trap
 
-wget https://github.com/kdoren/linux/releases/download/rpi_5.10.52-rt47/linux-image-5.10.52-rt47-v7l+_5.10.52-1_armhf.deb
-wget https://github.com/kdoren/linux/releases/download/rpi_5.10.52-rt47/linux-libc-dev_5.10.52-1_armhf.deb
+wget https://github.com/kdoren/linux/releases/download/rpi_5.10.74-rt54/linux-image-5.10.74-rt54-v7l+_5.10.74-1_armhf.deb
+wget https://github.com/kdoren/linux/releases/download/rpi_5.10.74-rt54/linux-libc-dev_5.10.74-1_armhf.deb
 
 dpkg -i *.deb
 
-KERN=5.10.52-rt47-v7l+
+KERN=5.10.74-rt54-v7l+
 mkdir -p /boot/$KERN/overlays/
 cp -d /usr/lib/linux-image-$KERN/overlays/* /boot/$KERN/overlays/
 cp -dr /usr/lib/linux-image-$KERN/* /boot/$KERN/
