@@ -18,9 +18,11 @@ Also many thanks to people contributing code.
 Where to get it?
 ----------------
 
-Official mirror is `here <http://unofficialpi.org/Distros/RealtimePi>`_
+You can use the `pi-imager <https://github.com/guysoft/pi-imager/releases>`_ commuity raspberrypi imager here, unofficial section.
 
-Nightly builds are available `here <http://unofficialpi.org/Distros/RealtimePi/nightly/>`_ (currently built on demand)
+Or download directly form the official mirror `here <http://unofficialpi.org/Distros/RealtimePi>`_
+
+Nightly builds are available on pi-imager above or `here <http://unofficialpi.org/Distros/RealtimePi/nightly/>`_ (currently built on demand)
 
 How to use it?
 --------------
